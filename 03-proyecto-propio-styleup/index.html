@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>StyleUp | Proyecto propio 2D + 3D</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html">← Volver al inicio</a>
+      <div class="logo">STYLE<span>UP</span></div>
+      <span>PROYECTO ORIGINAL · SEMANA 10</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">JavaScript Avanzado · CSS</p>
+        <h1>Moda en movimiento</h1>
+        <p>
+          Dos formas de explorar productos StyleUp: una tarjeta con
+          transformaciones 2D y una galería circular 3D con profundidad real.
+        </p>
+      </section>
+      <section class="panel" aria-labelledby="heading2d">
+        <div class="info">
+          <span class="tag">01 / TRANSFORMACIONES 2D</span>
+          <h2 id="heading2d">Chaqueta varsity azul</h2>
+          <p>
+            Explora los dos lados de la chaqueta. El CSS utiliza
+            <code>translate</code>, <code>rotate</code>, <code>scale</code> y
+            <code>skew</code>; JavaScript aplica la transformación al pulsar un
+            botón.
+          </p>
+          <div class="buttons" id="effects">
+            <button data-transform="none" class="selected">Original</button
+            ><button data-transform="scale(1.12)">Escalar</button
+            ><button data-transform="rotate(-8deg)">Rotar</button
+            ><button data-transform="translateX(25px)">Mover</button
+            ><button data-transform="skew(-8deg)">Inclinar</button>
+          </div>
+          <button class="secondary" id="flipJacket">
+            Ver parte posterior ↔
+          </button>
+          <p class="readout">
+            Transformación actual: <code id="activeTransform">none</code>
+          </p>
+        </div>
+        <div class="product-stage">
+          <article class="product" id="product">
+            <div class="image-holder">
+              <img
+                id="jacketImg"
+                src="imagenes/chaqueta-frente.jpg"
+                alt="Chaqueta azul y blanca, vista frontal"
+              />
+            </div>
+            <div class="product-caption">
+              <span>STYLEUP / OUTERWEAR</span
+              ><strong>Varsity Blue Edition</strong><span class="pill">2D</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="gallery-section" aria-labelledby="heading3d">
+        <div class="gallery-head">
+          <span class="tag">02 / TRANSFORMACIONES 3D</span>
+          <h2 id="heading3d">Colección streetwear 360°</h2>
+          <p>
+            Seis looks a partir de la imagen de tu colección. Las tarjetas
+            forman un carrusel en perspectiva, con giro sobre el eje Y y
+            desplazamiento en Z.
+          </p>
+        </div>
+        <div class="scene">
+          <div class="carousel" id="carousel">
+            <div class="face">
+              <img
+                src="imagenes/look-urbano.jpg"
+                alt="Conjunto urbano negro"
+              /><span>URBAN NIGHT</span>
+            </div>
+            <div class="face">
+              <img
+                src="imagenes/look-camuflaje.jpg"
+                alt="Look de camuflaje verde"
+              /><span>CAMO TECH</span>
+            </div>
+            <div class="face">
+              <img
+                src="imagenes/look-verde.jpg"
+                alt="Prenda verde con capucha"
+              /><span>GREEN MODE</span>
+            </div>
+            <div class="face">
+              <img
+                src="imagenes/look-violeta.jpg"
+                alt="Look violeta urbano"
+              /><span>PURPLE WAVE</span>
+            </div>
+            <div class="face">
+              <img
+                src="imagenes/look-blanco.jpg"
+                alt="Look deportivo blanco"
+              /><span>WHITE MOTION</span>
+            </div>
+            <div class="face">
+              <img
+                src="imagenes/look-negro.jpg"
+                alt="Look oscuro urbano"
+              /><span>BLACK EDITION</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-actions">
+          <button id="prev">← Anterior</button
+          ><button id="play" aria-pressed="false">▶ Automático</button
+          ><button id="next">Siguiente →</button>
+        </div>
+        <p class="readout">
+          Ángulo: <code id="angle">0°</code> · Propiedades:
+          <code>perspective</code>, <code>rotateY()</code>,
+          <code>translateZ()</code>, <code>preserve-3d</code>
+        </p>
+        <details>
+          <summary>Ver imagen original de la colección</summary>
+          <img
+            class="original"
+            src="imagenes/coleccion-original.jpg"
+            alt="Collage original de la colección aportado para el ejercicio"
+          />
+        </details>
+      </section>
+    </main>
+    <footer>
+      StyleUp · Ejercicio personalizado · Transformaciones CSS 2D y 3D ·
+      Imágenes suministradas para esta tarea
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

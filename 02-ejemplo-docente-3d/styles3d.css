@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2c3e50;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+.contenedor {
+  perspective: 1000px;
+  margin: 70px;
+}
+.cubo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotar 6s infinite linear;
+}
+.cara {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  backface-visibility: visible;
+}
+.frente {
+  transform: translateZ(100px);
+}
+.atras {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.izquierda {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.derecha {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.arriba {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.abajo {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+@keyframes rotar {
+  from {
+    transform: rotateX(-30deg) rotateY(-30deg);
+  }
+  to {
+    transform: rotateX(-30deg) rotateY(330deg);
+  }
+}
+.volver {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  color: #fff;
+}
+.nota {
+  margin: 20px;
+  color: #dce5ed;
+  text-align: center;
+}
